@@ -15,13 +15,14 @@ echo -n "done"
 
 echo -n "-----> Extracting ZIP"
 unzip "$MATOMO_ZIP" -d "$MATOMO_DOWNLOADS"
-mv "$MATOMO_DOWNLOADS/matomo/"* "$1"
+mv "$MATOMO_DOWNLOADS/matomo"/* "$1"
 echo -n "done"
 
 echo -n "-----> Deleting downloads directory"
 rm -rf "$MATOMO_DOWNLOADS"
 echo -n "done"
 
-echo -n "-----> Copying buildpack extra plugins"
-mv "$1/extra/"* "$1"
+echo -n "-----> Copying buildpack extra config and plugins"
+mv ./config/* "$1/config"
+mv ./plugins/* "$1/plugins"
 echo -n "done"
