@@ -1,9 +1,9 @@
 # Matomo-buildpack
 
-## Deploying
+## Upgrading
 
 ```shell script
-git tag -a vX.Y -m "Release vX.Y"
+./upgrade-matomo-version <new_matomo_version> #ex: 3.14.1
 ```
 
 ## Links
