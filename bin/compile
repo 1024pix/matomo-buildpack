@@ -15,7 +15,7 @@ echo -n "done"
 
 echo -n "-----> Extracting ZIP"
 unzip "$MATOMO_ZIP" -d "$MATOMO_DOWNLOADS"
-mv "$MATOMO_DOWNLOADS/matomo/*" "$1"
+mv "$MATOMO_DOWNLOADS/matomo/"* "$1"
 echo -n "done"
 
 echo -n "-----> Deleting downloads directory"
