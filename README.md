@@ -6,7 +6,7 @@ Buildpack for running a Matomo instance on a Cloud Platform (Scalingo, Clever Cl
 
 [Matomo](https://matomo.org) is a free and open source web analytics application, designed to be an open and compliant with GDPR alternative to Google Analytics.
 
-It is mainly a PHP + MySQL/MariaDB application (with a little big of AngularJS).
+It is mainly a PHP + MySQL/MariaDB application (with a little bit of AngularJS).
 
 ![](docs/screenshot.webp)
 
@@ -87,4 +87,4 @@ git tag -d v3.14.1 && \
 
 ## License
 
-This software has been released under [AGPL-3.0 license](https://choosealicense.com/licenses/agpl-3.0/).
+This software has been distributed under [AGPL-3.0 license](https://choosealicense.com/licenses/agpl-3.0/).
