@@ -1019,6 +1019,7 @@ Plugins[] = Tour
 Plugins[] = EnvironmentVariables
 Plugins[] = DbCommands
 Plugins[] = AdminCommands
+Plugins[] = LicenseKeyCommands
 
 [PluginsInstalled]
 PluginsInstalled[] = Diagnostics
