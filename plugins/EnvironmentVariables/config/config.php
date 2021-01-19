@@ -7,29 +7,8 @@
  *
  */
 
-class NonWritingConfig extends Piwik\Config
-{
-    public function __construct(Piwik\Config $original)
-    {
-        $this->settings = $original->settings;
-    }
-
-    /**
-     * Dump config
-     *
-     * @return string|null
-     * @throws \Exception
-     */
-    public function dumpConfig()
-    {
-        return false;
-    }
-}
-
 return array(
     'Piwik\Config' => DI\decorate(function ($previous, \Interop\Container\ContainerInterface $c) {
-        $wrapped = new NonWritingConfig($previous);
-
         $settings = $c->get(\Piwik\Application\Kernel\GlobalSettingsProvider::class);
 
         $ini = $settings->getIniFileChain();
@@ -41,13 +20,13 @@ return array(
 
                 $envValue = getenv($settingEnvName);
                 if ($envValue !== false) {
-                    $general = $wrapped->$category;
+                    $general = $previous->$category;
                     $general[$settingName] = $envValue;
-                    $wrapped->$category = $general;
+                    $previous->$category = $general;
                 }
             }
         }
 
-        return $wrapped;
+        return $previous;
     }),
 );
