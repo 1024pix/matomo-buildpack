@@ -1016,7 +1016,6 @@ Plugins[] = UserId
 Plugins[] = CustomPiwikJs
 Plugins[] = Tour
 
-Plugins[] = EnvironmentVariables
 Plugins[] = DbCommands
 Plugins[] = AdminCommands
 Plugins[] = LicenseKeyCommands
