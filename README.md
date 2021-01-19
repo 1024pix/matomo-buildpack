@@ -29,16 +29,15 @@ All that we want is to run an already packaged software. It seems then better to
 
 This buildpack does the following, see `bin/compile`:
 - for a given release/tag, it downloads (via a cUrl command) the Matomo archive
-- unzip it 
-- add some plugins, useful in a Cloud-based context
-    - EnvironmentVariables
+- unzip it
+- install some plugins, useful in a Cloud-based context
     - AdminCommands
     - DbCommands
-- install and activate them by default
-    
-> The last two plugins are custom ones, initially developed by the Scalingo Team 💪.
+    - LicenseKeyCommands
 
-The version of the Matomo is defined in the `bin/version` file. 
+> The first two plugins are custom ones, initially developed by the Scalingo Team 💪.
+
+The version of the Matomo is defined in the `bin/version` file.
 
 This buildpack follows the [Cloud Native Buildpacks Specification](https://github.com/buildpacks/spec). So it should be compatible with [Scalingo](https://doc.scalingo.com/platform/deployment/buildpacks/custom), [Dokku](http://dokku.viewdocs.io/dokku~v0.5.0/deployment/buildpacks/) or [Heroku](https://devcenter.heroku.com/articles/buildpacks).
 
