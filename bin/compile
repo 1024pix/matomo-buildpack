@@ -22,7 +22,6 @@ echo -n "-----> Deleting downloads directory... "
 rm -rf "$MATOMO_DOWNLOADS"
 echo "done"
 
-echo -n "-----> Copying buildpack extra config and plugins... "
-mv ./config/* "$1/config"
+echo -n "-----> Copying buildpack extra plugins... "
 mv ./plugins/* "$1/plugins"
 echo "done"
